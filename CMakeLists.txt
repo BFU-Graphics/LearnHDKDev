@@ -3,8 +3,7 @@ project(LearnHDK)
 
 set(CMAKE_CXX_STANDARD 17)
 
-set(HOUDINI_DSO_PATH C:/Users/xiangyangcheng/Documents/houdini19.5/dso)
-set(Houdini_DIR "E:/Softwares/Houdini/APP/Houdini19.5.716/toolkit/cmake")
+set(Houdini_DIR "C:/Program Files/Side Effects Software/Houdini 19.5.716/toolkit/cmake")
 find_package(Houdini REQUIRED)
 
 add_library(MyLib1 SHARED
