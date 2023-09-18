@@ -1,16 +1,20 @@
 #ifndef LEARNHDK_MY_LIB1_H
 #define LEARNHDK_MY_LIB1_H
 
-#include <SOP/SOP_Node.h>
+#include <OBJ/OBJ_Geometry.h>
 
-class MyLib1 : public SOP_Node
+class MyLib1 : public OBJ_Geometry
 {
 public:
-	MyLib1(OP_Network *parent, const char *name, OP_Operator *entry);
-	virtual auto test_func(OP_Context &context) -> OP_ERROR;
+	static auto myConstructor(OP_Network *network, const char *name, OP_Operator *op) -> OP_Node*;
+	static auto buildTemplatePair(OP_TemplatePair *prevstuff) -> OP_TemplatePair*;
+
+public:
+	MyLib1(OP_Network *network, const char *name, OP_Operator *op);
+	~MyLib1() override;
 
 protected:
-	auto cookMySop(OP_Context &context) -> OP_ERROR override;
+	auto applyInputIndependentTransform(OP_Context &context, UT_DMatrix4 &mat) -> int override;
 };
 
 #endif //LEARNHDK_MY_LIB1_H
