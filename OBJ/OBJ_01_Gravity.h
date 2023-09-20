@@ -2,6 +2,7 @@
 #define LEARNHDK_OBJ_01_GRAVITY_H
 
 #include <OBJ/OBJ_Geometry.h>
+#include <UT/UT_DSOVersion.h>
 
 class OBJ_01_Gravity : public OBJ_Geometry
 {

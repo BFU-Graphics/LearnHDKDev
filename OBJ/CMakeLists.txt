@@ -1,6 +1,6 @@
 set(OBJ_TARGETS
         OBJ_01_Gravity
-        OBJ_02_MassSpring
+#        OBJ_02_MassSpring
 )
 
 foreach(TARGET ${OBJ_TARGETS})
