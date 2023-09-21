@@ -2,6 +2,8 @@
 #include <PRM/PRM_Include.h>
 #include <SIM/SIM_DopDescription.h>
 
+#include <SIM/SIM_Object.h>
+
 void initializeSIM(void *)
 {
 	IMPLEMENT_DATAFACTORY(GravitySolver);
@@ -9,6 +11,7 @@ void initializeSIM(void *)
 
 auto GravitySolver::solveSingleObjectSubclass(SIM_Engine &engine, SIM_Object &object, SIM_ObjectArray &feedbacktoobjects, const SIM_Time &timestep, bool newobject) -> SIM_Solver::SIM_Result
 {
+	object.getPosition();
 	return SIM_SOLVER_SUCCESS;
 }
 
