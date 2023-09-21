@@ -13,6 +13,9 @@ public:
 	static auto buildTemplatePair(OP_TemplatePair *prevstuff) -> OP_TemplatePair*;
 	// constructor
 	OBJ_01_Gravity(OP_Network *network, const char *name, OP_Operator *op);
+
+protected:
+	auto applyInputIndependentTransform(OP_Context &context, UT_DMatrix4 &mat) -> int override;
 };
 
 #endif //LEARNHDK_OBJ_01_GRAVITY_H
