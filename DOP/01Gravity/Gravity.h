@@ -3,6 +3,7 @@
 
 #include <SIM/SIM_SingleSolver.h>
 #include <SIM/SIM_OptionsUser.h>
+#include <SIM/SIM_Utils.h>
 #include <UT/UT_DSOVersion.h> // must include
 
 class GravitySolver : public SIM_SingleSolver, public SIM_OptionsUser
