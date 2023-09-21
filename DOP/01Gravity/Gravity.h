@@ -1,0 +1,9 @@
+#ifndef LEARNHDKDEV_GRAVITY_H
+#define LEARNHDKDEV_GRAVITY_H
+
+class Gravity
+{
+
+};
+
+#endif //LEARNHDKDEV_GRAVITY_H
